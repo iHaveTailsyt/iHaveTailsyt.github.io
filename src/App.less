@@ -1,0 +1,119 @@
+@import "./common/common.less";
+
+* {
+	box-sizing: border-box;
+	user-select: none;
+}
+
+html {
+	background: #000;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+
+	font-family: "Roboto", Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #fff;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+ul {
+	margin: 0;
+}
+
+.app-container {
+	width: 960px;
+	height: 576px;
+	background: #000;
+	overflow: hidden;
+}
+
+.view-container {
+	border: 1px solid @border-color;
+	border-radius: 4px;
+	height: 514px;
+	overflow: hidden;
+}
+
+.rarity-common {
+	border-color: @rarity-common !important;
+}
+
+.rarity-rare {
+	border-color: @rarity-rare !important;
+}
+
+.rarity-epic {
+	border-color: @rarity-epic !important;
+}
+
+.positive {
+	color: @rarity-common;
+}
+
+.error, .negative {
+	color: @error-color;
+}
+
+button {
+	border: 1px solid @border-color;
+	border-radius: 4px;
+	background: #000;
+	color: #fff;
+	width: 128px;
+	height: 54px;
+	font-family: "Roboto", Arial, Helvetica, sans-serif !important;
+	font-size: 16px;
+
+	&:hover {
+		background: @background-color;
+	}
+
+	&:focus {
+		outline: 0;
+	}
+
+	&:active {
+		box-shadow: inset 0px 0px 10px 0px rgba(255,255,255,1);
+	}
+
+	&[disabled] {
+		color: @border-color;
+		cursor: not-allowed;
+
+		&:hover {
+			background: #000;
+		}
+	}
+}
+
+select, input {
+	border: 1px solid @border-color;
+	border-radius: 4px;
+	background: #000;
+	color: #fff;
+	width: 256px;
+	height: 54px;
+	font-family: "Roboto", Arial, Helvetica, sans-serif !important;
+	font-size: 16px;
+	padding-left: 10px;
+	outline: 0;
+}
+
+a, a:hover, a:active, a:visited {
+	color: #fff;
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: none;
+}

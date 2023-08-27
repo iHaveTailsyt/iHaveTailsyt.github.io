@@ -1,0 +1,50 @@
+@import "../../../common/common.less";
+
+.gear {
+	flex: 1 0 320px;
+	border-bottom: 1px solid @border-color;
+	display: flex;
+
+	.column1 {
+		flex: 1 0 100px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: flex-end;
+		padding: 80px 0 80px 0;
+	}
+
+	.column2 {
+		flex: 1 0 120px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	.column3 {
+		flex: 1 0 100px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: flex-start;
+		padding: 80px 0 80px 0;
+	}
+
+	.gear-slot {
+		width: 64px;
+		height: 64px;
+		border: 1px solid @border-color;
+		border-radius: 4px;
+		overflow: hidden;
+
+		&.head { background: url(./images/head.png); }
+		&.chest { background: url(./images/chest.png); }
+		&.hands { background: url(./images/hands.png); }
+		&.legs { background: url(./images/legs.png); }
+		&.feet { background: url(./images/feet.png); }
+		&.mainHand { background: url(./images/main_hand.png); }
+		&.offHand { background: url(./images/off_hand.png); }
+		&.ring { background: url(./images/ring.png); }
+	}
+}

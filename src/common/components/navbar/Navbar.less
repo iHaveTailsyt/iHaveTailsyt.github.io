@@ -1,0 +1,50 @@
+@import "../../common.less";
+
+.navbar {
+	border: 1px solid @border-color;
+	border-radius: 4px;
+	height: 56px;
+	margin-bottom: 6px;
+	display: flex;
+	color: #fff;
+	overflow: hidden;
+
+	.menu {
+		flex: 0 1 auto;
+		display: flex;
+		overflow: hidden;
+
+		.navbar-item {
+			z-index: 10;
+			border: 0;
+			border-left: 1px solid @border-color;
+			border-radius: 0;
+			width: 64px;
+
+			i {
+				font-size: 24px;
+			}
+
+			&.active {
+				background: @background-color;
+			}
+
+			&.dropzone {
+				box-shadow: inset 0px 0px 10px 0px rgba(255,255,255,1);
+			}
+
+			&.notify {
+				animation: navbarNotify 1s ease-in-out infinite alternate;
+			}
+		}
+
+		.vendor-navbar-item {
+			z-index: 10;
+		}
+	}
+}
+
+@keyframes navbarNotify {
+	from { box-shadow: inset 0px 0px 10px 0px rgba(255,255,255,1); }
+	to { box-shadow: inset 0px 0px 25px 0px rgba(255,255,255,1); }
+}
